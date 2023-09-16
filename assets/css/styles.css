@@ -1,0 +1,245 @@
+:root{
+    --color-search-border: #FFFFFF;
+    --color-search-icon: #EB5757;
+    --color-hover-btn: #FAFBFD;
+    --color-content-header-title: #333333;
+    --color-content-header-quantity: #4F4F4F;
+
+    --color-article-type: #828282;
+
+    --color-button-description-black: #000000; 
+    --color-button-description-with-opacity: #828282;
+    --color-footer-creator: #A9A9A9;
+
+    --font-family-ubuntu: "Ubuntu Mono";
+}
+
+html{
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    font-family: Montserrat;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--color-text-body);
+    position: relative;
+}
+
+.layout{
+    width: 1200px;
+    min-width: 1200px;
+    
+    position: relative;
+
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.layout__header{
+    width: 100%;
+    align-items: center;
+    
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.header__title{
+    text-align: center;
+
+    font-size: 5rem;
+}
+
+.layout__navbar{
+    width: 100%;
+
+}
+
+.navbar__list{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    width: 40%;
+}
+
+.navbar__item-active,
+.navbar__item-all,
+.navbar__item-completed{
+    position: relative;
+    flex: 1;
+    padding: 2rem 2rem;
+    text-align: center;
+    width: 80%;
+    border-bottom: 0;
+    transition: all 200ms linear;
+}
+
+.navbar__item-active:hover,
+.navbar__item-all:hover,
+.navbar__item-completed:hover{
+    position: relative;
+    background-color: var(--color-hover-btn);
+    box-shadow: 1px 0 6px 0 rgba(0,0,0,0.1);
+    border-radius: 2rem 2rem 0 0;
+}
+
+.item__all,
+.item__active,
+.item__completed{
+    position: absolute;
+    height: 4px;
+    width: 0%;
+    background-color: #2F80ED;
+    bottom: 0%;
+    left: 0%;
+    transition: all 200ms ease-in-out;
+}
+
+.item--active{
+    width: 100%;
+}
+
+.navbar__item-active:hover .item__active,
+.navbar__item-all:hover .item__all,
+.navbar__item-completed:hover .item__completed{
+    width: 100%;
+}
+
+.navbar__line{
+    height: 1px;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: #000000;
+}
+
+.layout__container{
+    width: 100%;
+}
+
+.layout__first,
+.layout__second,
+.layout__third {
+    display: none;
+    position: relative;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.first__add-bar,
+.second__add-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 3rem;
+}
+
+.add-bar__input,
+.add-bar__input-active{
+    flex-basis: 80%;
+
+    border-radius: 1.2rem;
+    border: 1px solid #BDBDBD;
+
+    padding: 1.2rem 1rem;
+    margin-right: 2rem;
+}
+
+.add-bar__input::placeholder,
+.add-bar__input-active::placeholder{
+    color:  #BDBDBD;
+    font-size: 1.4rem;
+}
+
+.add-bar__btn,
+.add-bar__btn-active{
+    flex-basis: 20%;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 1.2rem;
+    color: #FFFFFF;
+    background-color: #2F80ED;
+    cursor: pointer;
+}
+
+.first__list,
+.second__list,
+.third__list{
+    width: 100%;
+}
+
+.first__item,
+.second__item,
+.third__item{
+
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0 ;
+}
+
+.first__item-checkbox,
+.second__item-checkbox,
+.third__item-checkbox{
+    margin-right: 1rem;
+}
+.first__item-checkbox:checked~.first__item-label,
+.second__item-checkbox:checked~.second__item-label,
+.third__item-checkbox:checked~.third__item-label
+{
+    text-decoration: line-through;
+}
+
+.third__item-delete-icon{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #BDBDBD;
+    background-color: transparent;
+    border: none;
+}
+
+.third__button{
+    width: 100%;
+    display: flex;
+    align-content: end;
+    position: relative;
+    margin-top: 6rem;
+}
+
+.button__btn .btn__delete-icon{
+
+    font-size: 1rem;
+}
+
+.button__btn{
+    display: flex;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    background-color: #EB5757;
+    color: #FFFFFF;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+
+    align-items: center;
+}
+
+.layout__element--active{
+    display: block;
+}
+
